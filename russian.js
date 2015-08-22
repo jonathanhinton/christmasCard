@@ -1,8 +1,12 @@
-var greeting = ["merry christmas", "happy new year"];
+var greeting = ["merry", "christmas", "happy", "new", "year"];
+var translatedGreeting = [];
 var christmasTranslator = (function(){
   var russian = {
-    "merry christmas" : "С Рождеством",
-    "happy new year" : "с Новым Годом",
+    "merry" : "С",
+    "christmas" : "Рождеством",
+    "happy" : "С",
+    "new" : "Новым",
+    "year" : "Годом",
     "seasons" : "сезоны",
     "greetings" : "приветствия",
     "holidays" : "каникулы",
@@ -18,14 +22,18 @@ var christmasTranslator = (function(){
   };
 
   return {
-    translateToRussian: function() {
-      return russian;
+    translateToRussian: function(greeting) {
+      greeting.forEach(function(word){
+        translatedGreeting.push(russian[word]);
+      })
+      console.log(transGreeting);
+      return transGreeting;
     }
 
   };
 }());
 
-console.log(christmasTranslator.getRussian());
+console.log(christmasTranslator.translateToRussian(greeting));
 
 
 //lexicon
