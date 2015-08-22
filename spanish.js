@@ -20,7 +20,6 @@ var christmasTranslator =(function(){
 		"toward": "hacia",
 		"men": "hombres",
 		"and": "y"
-*/
 	}
 	return {
 		translateToSpanish: function(greeting){
