@@ -26,8 +26,7 @@ var christmasTranslator = (function(){
       greeting.forEach(function(word){
         translatedGreeting.push(russian[word]);
       })
-      console.log(transGreeting);
-      return transGreeting;
+      return translatedGreeting;
     }
 
   };

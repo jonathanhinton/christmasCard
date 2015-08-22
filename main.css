@@ -32,3 +32,9 @@ h3 {
   margin: auto;
   width: 30%;
 }
+
+#translate {
+  display: inline-block;
+  margin: auto;
+  width: 25%;
+}
