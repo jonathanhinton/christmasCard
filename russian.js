@@ -1,5 +1,4 @@
-var greeting = ["merry", "christmas", "happy", "new", "year"];
-var translatedGreeting = [];
+// var greeting = ["merry", "christmas", "happy", "new", "year"];
 var christmasTranslator = (function(){
   var russian = {
     "merry" : "С",
@@ -19,17 +18,18 @@ var christmasTranslator = (function(){
     "toward" : "к",
     "men" : "люди",
     "and" : "и"
-  };
+  }
 
   return {
-    translateToRussian: function(greeting) {
+    translateToRussian : function(greeting) {
+      var translatedGreeting = [];
       greeting.forEach(function(word){
         translatedGreeting.push(russian[word]);
       })
       return translatedGreeting;
     }
-
   };
-}());
+})();
 
-console.log(christmasTranslator.translateToRussian(greeting));
+// console.log(christmasTranslator.translateToRussian(greeting));
+
