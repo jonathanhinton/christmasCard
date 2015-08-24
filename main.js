@@ -1,7 +1,7 @@
 
 
 function getUserInput(userInput) {
-  var userInput = $("#englishGreeting").val();
+  var userInput = $("#englishGreeting").val().toLowerCase();
   var userString = userInput.split(" ");
   var translateOption = $("[name = 'language']");
   for (var i = 0; i < translateOption.length; i++) {
