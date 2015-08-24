@@ -19,12 +19,13 @@ var translator = (function(translator){
     "and" : "и"
   }
 
-    translator.translateToRussian = function(greeting) {
-      var translatedGreeting = [];
-      greeting.forEach(function(word){
-        translatedGreeting.push(russian[word]);
-      })
-      return translatedGreeting;
+  translator.translateToRussian = function (userInputArray) {
+    console.log("translating to russian");
+    var translatedGreetingArray = [];
+    userInputArray.forEach(function(word){
+      translatedGreetingArray.push(russian[word]);
+    })
+    return translatedGreetingArray;
   };
   return translator;
 })(translator);

@@ -1,4 +1,4 @@
-var translator =(function(translator){
+var translator = (function(translator){
 	var spanish = {
 		"merry": "alegre",
 		"christmas": "navidad",
@@ -19,14 +19,13 @@ var translator =(function(translator){
 		"and": "y"
 	}
 
-		translator.translateToSpanish = function(greeting){
-			var translatedGreeting = [];
-			greeting.forEach(function(word){
-				translatedGreeting.push(spanish[word]);
-			})
-			return translatedGreeting;
-		};
+	translator.translateToSpanish = function (userInputArray) {
+		console.log("translating to spanish");
+		var translatedGreetingArray = [];
+		userInputArray.forEach(function(word){
+			translatedGreetingArray.push(spanish[word]);
+		})
+		return translatedGreetingArray;
+	};
 	return translator;
 })(translator);
-
-// console.log(translator.translateToSpanish(testGreetings));
