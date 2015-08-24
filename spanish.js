@@ -25,7 +25,10 @@ var translator = (function(translator){
 		userInputArray.forEach(function(word){
 			translatedGreetingArray.push(spanish[word]);
 		})
+		var text2speech = translatedGreetingArray.join(" ");
+    $("#translateButton").on("click", responsiveVoice.speak(text2speech));
 		return translatedGreetingArray;
+
 	};
 	return translator;
 })(translator);

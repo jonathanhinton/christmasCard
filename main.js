@@ -17,6 +17,7 @@ return {
         var translation = translator.translateToSpanish(userInputArray);
         $("#translation-output").text(translation.join(" "));
       }
+    return translation
     }
   }
 })();
