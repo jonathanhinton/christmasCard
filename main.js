@@ -3,7 +3,7 @@ var translator = (function(){
 
 return {
   translate: function () {
-    var userInput = $("#englishGreeting").val();
+    var userInput = $("#englishGreeting").val().toLowerCase();
     var userInputArray = userInput.split(" ");
     console.log(userInputArray);
     var language = $("#languages").val();
