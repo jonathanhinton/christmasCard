@@ -1,6 +1,4 @@
-// var testGreetings = ["merry", "christmas"];
-
-var christmasTranslator =(function(bravo){
+var translator =(function(translator){
 	var spanish = {
 		"merry": "alegre",
 		"christmas": "navidad",
@@ -21,14 +19,14 @@ var christmasTranslator =(function(bravo){
 		"and": "y"
 	}
 
-		bravo.translateToSpanish = function(greeting){
+		translator.translateToSpanish = function(greeting){
 			var translatedGreeting = [];
 			greeting.forEach(function(word){
 				translatedGreeting.push(spanish[word]);
 			})
 			return translatedGreeting;
 		};
-	return bravo;
-})(christmasTranslator);
+	return translator;
+})(translator);
 
-// console.log(christmasTranslator.translateToSpanish(testGreetings));
+// console.log(translator.translateToSpanish(testGreetings));
