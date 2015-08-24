@@ -26,7 +26,7 @@ var translator = (function(translator){
       translatedGreetingArray.push(russian[word]);
     })
     var text2speech = translatedGreetingArray.join(" ");
-    $("#translateButton").on("click", responsiveVoice.speak(text2speech));
+    $("#translateButton").on("click", responsiveVoice.speak(text2speech, "Russian Female"));
     return translatedGreetingArray;
   };
   return translator;
