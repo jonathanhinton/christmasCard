@@ -20,7 +20,7 @@ var translator = (function(translator){
   }
 
   translator.translateToRussian = function (userInputArray) {
-    console.log("translating to russian");
+    console.log("translating to german");
     var translatedGreetingArray = [];
     userInputArray.forEach(function(word){
       translatedGreetingArray.push(russian[word]);

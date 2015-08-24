@@ -1,32 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>Christmas Translator</title>
+  <title>Holiday Translator</title>
+  <link href='http://fonts.googleapis.com/css?family=Mountains+of+Christmas:700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-  <header id="header" class="header">
-    <h1>The Christmas Card Translator</h1>
-    <h3>Send your Christmas greeting to your favorite foreigner.</h3>
+  <header>
+    <h1>The Holiday Card Translator</h1>
+    <h3>Send your holiday greeting to your favorite foreigner.</h3>
   </header>
+  <div class="form">
+    <input type="text" id="englishGreeting" value="happy christmas" placeholder="Enter your message here">
 
-  <div id="christmas" aria-readonly="true">
+    <select id="languages">
+      <option selected disabled>Choose a Language</option>
+      <option value="russian">Russian (Русский)</option>
+      <option value="spanish">Spanish (Español)</option>
+    </select>
 
+    <button id="translateButton">Translate</button>
+
+    <div id="translation-output"></div>
+    <!-- <input id="text2speech" type='button' value='🔊 Play' /> -->
   </div>
-  <div class="text">
-    <textarea id="englishGreeting" name="englishGreeting" placeholder="Type your Christmas greeting here...in English!" rows="5" cols="30"></textarea><br>
-  </div>
-  <div class="radio">
-    <input type="radio" name="language" value="russian" class="language"> Russian (Русский)
-    <input type="radio" name="language" value="spanish" class="language"> Spanish (Español) <br>
-  <div class="theButton">
-    <button id="translate" type="submit">Translate</button>
-  </div>
-  </div>
+
+
+  <script src='http://code.responsivevoice.org/responsivevoice.js'></script>
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="main.js"></script>
   <script src="russian.js"></script>
   <script src="spanish.js"></script>
-  <script src="main.js"></script>
 </body>
 </html>

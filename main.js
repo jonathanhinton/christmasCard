@@ -1,24 +1,25 @@
+var translator = (function(){
 
 
-function getUserInput(userInput) {
-  var userInput = $("#englishGreeting").val().toLowerCase();
-  var userString = userInput.split(" ");
-  var translateOption = $("[name = 'language']");
-  for (var i = 0; i < translateOption.length; i++) {
-    var lang = translateOption[i];
-    if (lang.checked && lang.value === 'russian') {
-      var translation = christmasTranslator.translateToRussian(userString);
-      $("#christmas").text(translation.reduce(function(a, b) {
-        return a + " " + b;
-      }));
-    } else if (lang.checked && lang.value === 'spanish') {
-      var translation = christmasTranslator.translateToSpanish(userString);
-      $("#christmas").text(translation.reduce(function(a, b) {
-        return a + " " + b;
-      }));
+return {
+  translate: function () {
+    var userInput = $("#englishGreeting").val().toLowerCase();
+    var userInputArray = userInput.split(" ");
+    console.log(userInputArray);
+    var language = $("#languages").val();
+    console.log(language);
+      if (language === 'russian') {
+        console.log("russian selected");
+        var translation = translator.translateToRussian(userInputArray);
+        $("#translation-output").text(translation.join(" "));
+      } else if (language === 'spanish') {
+        console.log("spanish selected");
+        var translation = translator.translateToSpanish(userInputArray);
+        $("#translation-output").text(translation.join(" "));
+      }
+    return translation
     }
   }
-  return userString;
-}
+})();
 
-$("#translate").on("click", getUserInput);
+$("#translateButton").on("click", translator.translate);

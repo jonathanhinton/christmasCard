@@ -1,52 +1,37 @@
-.header {
+header {
   width: 100%;
   background-color: darkred;
   padding: 1em;
   margin-bottom: 10px;
-}
-
-h1 {
-  margin: 0;
-  padding: 0;
   color: white;
   font-family: "Helvetica Neue", sans-serif;
   text-align: center;
 }
 
+h1,
 h3 {
   margin: 0;
   padding: 0;
-  color: white;
-  font-family: "Helvetica Neue", sans-serif;
-  text-align: center;
 }
 
-.text {
-  display: block;
-  margin: auto;
-  width: 20%;
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.radio {
-  display: block;
-  margin: auto;
-  width: 30%;
+.form * {
+  font-size: 1em;
+  font-weight: bold;
+  padding: 1em;
+  margin: 1em;
 }
 
-.theButton {
-  margin-top: 10px;
-  margin: auto;
-  width: 35%;
-}
 
-/*#translate {
-  display: inline-block;
-  margin: auto;
-  width: 25%;
-}*/
-
-#christmas {
-    voice-family: male;
-    richness: 80;
-    cue-before: url("beep.au")
+#translation-output {
+  font-family: 'Mountains of Christmas', cursive;
+  font-weight: bold;
+  font-size: 5em;
+  margin: .25em;
+  padding: .25em;
 }
