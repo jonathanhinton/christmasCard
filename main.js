@@ -17,6 +17,7 @@ return {
         var translation = translator.translateToSpanish(userInputArray);
         $("#translation-output").text(translation.join(" "));
       } else if (language === 'french') {
+        console.log("french selected");
         var translation = translator.translateToFrench(userInputArray);
         $("#translation-output").text(translation.join(" "));
       }
