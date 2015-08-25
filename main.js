@@ -16,8 +16,12 @@ return {
         console.log("spanish selected");
         var translation = translator.translateToSpanish(userInputArray);
         $("#translation-output").text(translation.join(" "));
+      } else if (language === 'german') {
+        console.log("german selected");
+        var translation = translator.translateToGerman(userInputArray);
+        $("#translation-output").text(translation.join(" "));
       }
-    return translation
+      return translation
     }
   }
 })();
