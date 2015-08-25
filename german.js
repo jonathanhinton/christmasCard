@@ -1,32 +1,32 @@
 var translator = (function(translator){
-  var russian = {
-    "merry" : "С",
-    "christmas" : "Рождеством",
-    "happy" : "С",
-    "new" : "Новым",
-    "year" : "Годом",
-    "seasons" : "сезоны",
-    "greetings" : "приветствия",
-    "holidays" : "каникулы",
-    "hope" : "надеяться",
-    "joy" : "радость",
-    "peace" : "мир",
-    "on" : "на",
-    "earth" : "земля",
-    "goodwill" : "доброжелательность",
-    "toward" : "к",
-    "men" : "люди",
-    "and" : "и"
+  var german = {
+    "merry" : "Frohe",
+    "christmas" : "Weihnachten",
+    "happy" : "Frohes",
+    "new" : "neues",
+    "year" : "Jahr",
+    "seasons" : "die Grüße der",
+    "greetings" : "Jahreszeit",
+    "holidays" : "Ferien",
+    "hope" : "Hoffnung",
+    "joy" : "Freude",
+    "peace" : "Frieden",
+    "on" : "auf",
+    "earth" : "Erden",
+    "goodwill" : "Geschäfts- oder",
+    "toward" : "Firmenwert in Richtung",
+    "men" : "Männer",
+    "and" : "und"
   }
 
-  translator.translateToRussian = function (userInputArray) {
+  translator.translateToGerman = function (userInputArray) {
     console.log("translating to german");
     var translatedGreetingArray = [];
     userInputArray.forEach(function(word){
-      translatedGreetingArray.push(russian[word]);
+      translatedGreetingArray.push(german[word]);
     })
     var text2speech = translatedGreetingArray.join(" ");
-    $("#translateButton").on("click", responsiveVoice.speak(text2speech, "Russian Female"));
+    $("#translateButton").on("click", responsiveVoice.speak(text2speech, "Deutsch Female"));
     return translatedGreetingArray;
   };
   return translator;

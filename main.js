@@ -19,9 +19,12 @@ return {
       } else if (language === 'french') {
         console.log("french selected");
         var translation = translator.translateToFrench(userInputArray);
+      } else if (language === 'german') {
+        console.log("german selected");
+        var translation = translator.translateToGerman(userInputArray);
         $("#translation-output").text(translation.join(" "));
       }
-    return translation
+      return translation
     }
   }
 })();
