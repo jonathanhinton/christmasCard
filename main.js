@@ -31,7 +31,16 @@ return {
 })();
 
 function resizeInput() {
-    $(this).attr('size', $(this).val().length);
+  console.log("resize function run");
+  var placeholder = $(this).attr('placeholder');
+  console.log(placeholder.length);
+  var input = $(this).val();
+  console.log(input.length);
+  if (placeholder.length > input.length) {
+    $(this).attr('size', placeholder.length);
+  } else {
+    $(this).attr('size', input.length);
+  }
 }
 
 $('input[type="text"]')
